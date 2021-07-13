@@ -1,0 +1,200 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    font-family: 'Anton', sans-serif;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #131111 0%, #126E82 50%, #11131d 100%);
+  }
+  .night {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(45deg);
+  }
+  .shooting-star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 250px;
+    height: 5px;
+    background: linear-gradient(-45deg, rgb(0, 0, 255, 0) , #000000, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%),translateZ(45deg);
+    filter: drop-shadow(0 0 20px rgb(16, 34, 199));
+    animation:
+      tail 3s ease-in-out infinite,
+      shooting 3s ease-in-out infinite;
+  }
+  @keyframes tail {
+    0% {
+      width: 0;
+    }
+    
+    30% {
+      width: 100px;
+    }
+    
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shooting {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 0;
+    }
+  }
+  @keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+    
+    100% {
+      transform: translateX(300px);
+    }
+  }
+  .shooting-star::before, .shooting-star::after{
+    content: '';
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 0;
+     width: 30px;
+    height: 4px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #ffffff, rgba(0, 0, 255, 0));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining 3s ease-in-out infinite;
+    animation-delay: 0s;
+  }  
+  @keyframes shining {
+    0% {
+      width: 0;
+    }
+    
+    50% {
+      width: 30px;
+    }
+    
+    100% {
+      width: 0;
+    }
+  }
+  .shooting-star::after{
+    transform: translateX(50%) rotateZ(-45deg);
+    border-radius: 100%;
+  }
+
+  .shooting-star:nth-child(1){
+      top: calc(50% - 100px);
+      left: calc(50% - 250px);
+      animation-delay: 1s;
+  }
+     .shooting-star:nth-child(1)::before, .shooting-star:nth-child(1)::after{
+         animation-delay: 1s;
+     }  
+     .shooting-star:nth-child(2){
+        top: calc(50% - 200px);
+        left: calc(50% - 150px);
+        animation-delay: 1.2s;
+    }
+       .shooting-star:nth-child(2)::before, .shooting-star:nth-child(2)::after{
+           animation-delay: 1.2s;
+       }
+       .shooting-star:nth-child(3){
+        top: calc(50% - 0px);
+        left: calc(50% - 150px);
+        animation-delay: 1.3s;
+    }
+       .shooting-star:nth-child(3)::before, .shooting-star:nth-child(3)::after{
+           animation-delay: 1.3s;
+       }
+       .shooting-star:nth-child(4){
+        top: calc(50% - 50px);
+        left: calc(50%- 200px);
+        animation-delay: 1.4s;
+    }
+       .shooting-star:nth-child(4)::before, .shooting-star:nth-child(4)::after{
+           animation-delay: 1.4s;
+       }
+       .shooting-star:nth-child(5){
+        top: calc(50% - -100px);
+        left: calc(50% - 50px);
+        animation-delay: 1.5s;
+    }
+       .shooting-star:nth-child(5)::before, .shooting-star:nth-child(5)::after{
+           animation-delay: 1.5s;
+       }
+       .shooting-star:nth-child(6){
+        top: calc(70% - 200px);
+        left: calc(70% - 100px);
+        animation-delay: 1.6s;
+    }
+       .shooting-star:nth-child(6)::before, .shooting-star:nth-child(6)::after{
+           animation-delay: 1.6s;
+       }
+       .shooting-star:nth-child(7){
+        top: calc(70% - 300px);
+        left: calc(70% - 200px);
+        animation-delay: 1.8s;
+    }
+       .shooting-star:nth-child(7)::before, .shooting-star:nth-child(7)::after{
+           animation-delay: 1.8s;
+       }
+    section{
+        width: 60%;
+        margin: 10px;
+        
+        margin: 50px 50px;
+    }
+    article{
+        text-align: center;
+        font-size: 60px;
+        font-weight: 800;
+        font-style: inherit;
+        color:#FFC074;
+        padding-bottom: 30px;
+        text-shadow: 6px 6px 8px rgb(68, 66, 66);
+    }
+    #item-1{
+        padding-top: 70px;
+        font-size: 50px;
+        font-weight: bold;
+        font-style: oblique;
+        text-align: center;
+        line-height: 80px;
+        text-decoration: none;
+    }
+
+#item-2{
+    color: #FAF1E6;
+}   
+#item-3{
+    color: #FFC074;
+    
+}
+#item-4{
+    color: #B6C867;
+    
+}
+.item5{
+    text-decoration: none;
+}
+#item6{
+  color: #FF5200;
+}
+#home{
+    float: right;
+    padding-left: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #C2B8A3;
+    font-style: italic;
+    padding-top: 30px;
+}

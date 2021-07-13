@@ -1,0 +1,185 @@
+*{
+    margin: 0%;
+}
+body {
+    height: 100vh;
+    display: flex;
+    font-family: 'Anton', sans-serif;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom,  #362222 0%, #171010 50%, #423F3E 100%);
+  }
+  .night {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(45deg);
+  }
+  .shooting-star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 250px;
+    height: 5px;
+    background: linear-gradient(-45deg, rgb(0, 0, 255, 0) , #04009A, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%),translateZ(45deg);
+    filter: drop-shadow(0 0 20px rgb(16, 34, 199));
+    animation:
+      tail 3s ease-in-out infinite,
+      shooting 3s ease-in-out infinite;
+  }
+  @keyframes tail {
+    0% {
+      width: 0;
+    }
+    
+    30% {
+      width: 100px;
+    }
+    
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shooting {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 0;
+    }
+  }
+  @keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+    
+    100% {
+      transform: translateX(300px);
+    }
+  }
+  .shooting-star::before, .shooting-star::after{
+    content: '';
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 0;
+     width: 30px;
+    height: 4px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #ffffff, rgba(0, 0, 255, 0));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining 3s ease-in-out infinite;
+    animation-delay: 0s;
+  }  
+  @keyframes shining {
+    0% {
+      width: 0;
+    }
+    
+    50% {
+      width: 30px;
+    }
+    
+    100% {
+      width: 0;
+    }
+  }
+  .shooting-star::after{
+    transform: translateX(50%) rotateZ(-45deg);
+    border-radius: 100%;
+  }
+
+  .shooting-star:nth-child(1){
+      top: calc(50% - 100px);
+      left: calc(50% - 250px);
+      animation-delay: 1s;
+  }
+     .shooting-star:nth-child(1)::before, .shooting-star:nth-child(1)::after{
+         animation-delay: 1s;
+     }  
+     .shooting-star:nth-child(2){
+        top: calc(50% - 200px);
+        left: calc(50% - 150px);
+        animation-delay: 1.2s;
+    }
+       .shooting-star:nth-child(2)::before, .shooting-star:nth-child(2)::after{
+           animation-delay: 1.2s;
+       }
+       .shooting-star:nth-child(3){
+        top: calc(50% - 0px);
+        left: calc(50% - 150px);
+        animation-delay: 1.3s;
+    }
+       .shooting-star:nth-child(3)::before, .shooting-star:nth-child(3)::after{
+           animation-delay: 1.3s;
+       }
+       .shooting-star:nth-child(4){
+        top: calc(50% - 50px);
+        left: calc(50%- 200px);
+        animation-delay: 1.4s;
+    }
+       .shooting-star:nth-child(4)::before, .shooting-star:nth-child(4)::after{
+           animation-delay: 1.4s;
+       }
+       .shooting-star:nth-child(5){
+        top: calc(50% - -100px);
+        left: calc(50% - 50px);
+        animation-delay: 1.5s;
+    }
+       .shooting-star:nth-child(5)::before, .shooting-star:nth-child(5)::after{
+           animation-delay: 1.5s;
+       }
+       .shooting-star:nth-child(6){
+        top: calc(70% - 200px);
+        left: calc(70% - 100px);
+        animation-delay: 1.6s;
+    }
+       .shooting-star:nth-child(6)::before, .shooting-star:nth-child(6)::after{
+           animation-delay: 1.6s;
+       }
+       .shooting-star:nth-child(7){
+        top: calc(70% - 300px);
+        left: calc(70% - 200px);
+        animation-delay: 1.8s;
+    }
+       .shooting-star:nth-child(7)::before, .shooting-star:nth-child(7)::after{
+           animation-delay: 1.8s;
+       }
+
+
+
+     #item1{
+        padding-left: 50px;
+        padding-top: 50px;
+        font-weight: bolder;
+        font-family: 'Times New Roman';
+        
+    }
+    .item2{
+        text-decoration: none;
+        text-shadow: 6px 6px 8px grey;
+    }
+    .item-text{
+        font-size: 80px;
+         padding: 10px;
+         color:#39A2DB; 
+         display: block;
+    }
+    .item-text:hover{
+        visibility: hidden;
+        transition-delay: 0s;
+    }   
+    .item-text:hover::before{
+         content: attr(data-hover);
+         font-size: 90px;
+         visibility: visible;
+         color:#A03C78;   
+         transition-delay: 0s;
+    }
+ 
+  
+  
