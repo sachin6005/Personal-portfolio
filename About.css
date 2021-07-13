@@ -1,15 +1,29 @@
-
-*{
-    margin: 0%;
-}
 body {
-    height: 100vh;
-    display: flex;
+    height: 600px;
+    margin-top: 0%;
+    display: grid;
     font-family: 'Anton', sans-serif;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #131111 0%,#865a00 , 50%, black 100%);
+  }
+  @media screen and (max-width:900px){
+    body{
+      overflow: scroll;
+      width: 98%;
+      height: auto;
+    }
+    #home{
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 30px;
+
+    }
+    article{
+      position: sticky;
+      padding-top: 30px;
+    }
   }
   .night {
     position: relative;
@@ -155,8 +169,8 @@ p{
     color: #7DEDFF;
     font-size: 30px;
     font-family: fantasy;
-    word-spacing: 5px;
-    line-height: 40px;
+    word-spacing: 4px;
+    line-height: 30px;
     font-style: oblique;
 }
 #home{
@@ -167,22 +181,20 @@ p{
     font-weight: bolder;
     color: #FDD2BF;
     font-style: italic;
+    position: sticky;
     
 }
 section{
     width: 96%;
-    margin: 10px;
     height: 100%;    
-    margin: 50px 50px;
-
-    
-    
+    margin: 50px 50px    
 }
 article{
     color: #DF5E5E;
     text-align: center;
+    position: sticky;
     font-size: 50px;
     font-weight: 800;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     text-shadow: 6px 6px 8px rgb(71, 68, 68);
 }

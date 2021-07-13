@@ -1,12 +1,28 @@
 
 body {
-    height: 100vh;
-    display: flex;
+    height: 600px;
+    /* display: flex; */
     font-family: 'Anton', sans-serif;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #131111 0%, #126E82 50%, #11131d 100%);
+  }
+  @media screen and (max-width:900px){
+    body{
+      overflow: scroll;
+      width: 98%;
+      height: auto;
+      line-height: 25px;
+      word-spacing: 5px;
+    }
+    #home{
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 30px;
+      position: sticky;
+
+    }
   }
   .night {
     position: relative;

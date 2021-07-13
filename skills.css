@@ -2,13 +2,32 @@
     margin: 0%;
 }
 body {
-    height: 100vh;
+    height: 600px;
     display: block;
     font-family: 'Anton', sans-serif;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #131111 0%, #57837B 50%, #000000 100%);
+  }
+  @media screen and (max-width:900px){
+    body{
+      overflow: scroll;
+      width: 98%;
+      height: auto;
+      line-height: 25px;
+      word-spacing: 5px;
+    }
+    #home{
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 30px;
+
+    }
+    article{
+      position: sticky;
+      padding-top: 30px;
+    }
   }
   .night {
     position: relative;
@@ -159,7 +178,7 @@ section{
 }
 article{
     color: #F08FC0;
-    margin-left: 300px;
+    margin-left: 50px;
     font-size: 32px;
     font-weight: 600;
     padding-bottom: 10px;
@@ -175,7 +194,7 @@ p{
     font-style: italic;
     padding: 0px;
     padding-top: 30px;
-    margin-left: 300px;
+    margin-left: 50px;
 }
 #home{
     float: right;
