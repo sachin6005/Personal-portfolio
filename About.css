@@ -14,12 +14,12 @@ body {
       width: 98%;
       height: auto;
     }
-    #home{
+     #home{
       display: flex;
       flex-wrap: wrap;
       padding-bottom: 30px;
 
-    }
+     } 
     article{
       position: sticky;
       padding-top: 30px;
@@ -181,7 +181,7 @@ p{
     font-weight: bolder;
     color: #FDD2BF;
     font-style: italic;
-    /* position: relative;   */
+    position: relative;  
 }
 section{
     width: 96%;
